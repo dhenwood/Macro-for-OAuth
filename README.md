@@ -12,4 +12,18 @@ The macro's are broken into 3 seperate files:
 3. OAuthSavedTokens.js - this file stores the current access_token, refresh_token along with the corresponding expiry value
 
 ## Setup
-The creation of the clientId and clientSecret will vary based on the service for which you want to integrate to - I will use a Webex Service App as an example.
+The creation of the clientId and clientSecret will vary based on the service for which you want to integrate to - I will use a Webex Service App as an example. The steps to creating this can be found here: https://developer.webex.com/create/docs/service-apps. For the purposes of this example (sending a Webex message), you only need to enable the "spark:messages_write" scope. By creating a Webex Service App, it will generate the following. _Ensure you save each of these as these will be used in the macro_.
+1. clientId
+2. clientSecret
+3. access_token
+4. refresh_token
+
+Upload the three macro files (.js) from this repo to your video device. Ensure they are saved locally but at this stage do not enable them.
+
+In the OAuthRefreshToken macro, update the clientId and clientSecret to the values you obtained earlier.
+
+In the OAuthSavedTokens macro, update the refeshToken value (the other values will get updated when we first run it).
+
+In the SendMessage macro, update the emailAddress to your Webex address. Now enable _only_ the SendMessage macro (the other two do not need to be enabled). You should receive a Webex message from the Service App account.
+
+If you exit the Macro Editor page (top left) and then return - opening the OAuthSavedTokens macro should now have a new access_token, refresh_token, token_expires_at and refresh_expires_at value.
