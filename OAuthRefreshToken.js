@@ -1,7 +1,7 @@
 import xapi from 'xapi';
 
-const CLIENT_ID = '<removed>';
-const CLIENT_SECRET = '<removed>';
+const CLIENT_ID = 'replaceWithProvidedClientId';
+const CLIENT_SECRET = 'replaceWithProvidedClientSecret';
 const SAVED_TOKEN_FILE = "OAuthSavedTokens"
 
 async function getStoredTokens() {
