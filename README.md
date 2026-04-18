@@ -22,8 +22,8 @@ Upload the three macro files (.js) from this repo to your video device. Ensure t
 
 In the OAuthRefreshToken macro, update the clientId and clientSecret to the values you obtained earlier.
 
-In the OAuthSavedTokens macro, update the refeshToken value (the other values will get updated when we first run it).
+In the OAuthSavedTokens macro, update the refeshToken value (the other values will get updated when we first run it) to the value you obtained earlier.
 
-In the SendMessage macro, update the emailAddress to your Webex address. Now enable _only_ the SendMessage macro (the other two do not need to be enabled). You should receive a Webex message from the Service App account.
+In the SendMessage macro, update the email value to your Webex address. Now enable _only_ the SendMessage macro (the other two do not need to be enabled). You should receive a Webex message from the Service App account.
 
 If you exit the Macro Editor page (top left) and then return - opening the OAuthSavedTokens macro should now have a new access_token, refresh_token, token_expires_at and refresh_expires_at value.
