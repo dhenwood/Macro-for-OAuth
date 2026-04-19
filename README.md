@@ -20,7 +20,7 @@ The creation of the clientId and clientSecret will vary based on the service for
 
 Upload the three macro files (.js) from this repo to your video device. Ensure they are saved locally but at this stage do not enable them.
 
-In the OAuthRefreshToken macro, update the clientId and clientSecret to the values you obtained earlier.
+In the OAuthRefreshToken macro, update the clientId and clientSecret to the values you obtained earlier. If you are obtaining a token from a service other than Webex, update the OBTAIN_ACCESS_TOKEN_URL value to point to the required service's URL.
 
 In the OAuthSavedTokens macro, update the refeshToken value (the other values will get updated when we first run it) to the value you obtained earlier.
 
