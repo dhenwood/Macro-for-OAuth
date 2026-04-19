@@ -2,6 +2,8 @@ import xapi from 'xapi';
 
 const CLIENT_ID = 'replaceWithProvidedClientId';
 const CLIENT_SECRET = 'replaceWithProvidedClientSecret';
+const OBTAIN_ACCESS_TOKEN_URL = "https://webexapis.com/v1/access_token"
+
 const SAVED_TOKEN_FILE = "OAuthSavedTokens"
 
 async function getStoredTokens() {
@@ -27,7 +29,6 @@ async function saveTokens(tokens) {
 }
 
 async function refreshAccessToken(refreshToken) {
-  const url = "https://webexapis.com/v1/access_token"
   const header = "Content-type: application/x-www-form-urlencoded"
   const body = `grant_type=refresh_token&refresh_token=${refreshToken}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`
 
@@ -36,7 +37,7 @@ async function refreshAccessToken(refreshToken) {
         AllowInsecureHTTPS: "True",
         Header: header,
         ResultBody: "PlainText",
-        Url: url
+        Url: OBTAIN_ACCESS_TOKEN_URL
       },
       body);
 
