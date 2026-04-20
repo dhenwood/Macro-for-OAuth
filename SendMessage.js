@@ -1,5 +1,5 @@
 import xapi from 'xapi';
-import {getValidAccessToken} from './OAuthRefreshTokens';
+import {getValidAccessToken} from './OAuthRefreshToken';
 
 async function sendMessage() {
   const token = await getValidAccessToken();
