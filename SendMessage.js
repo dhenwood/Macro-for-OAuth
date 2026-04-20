@@ -4,7 +4,7 @@ import {getValidAccessToken} from './OAuthRefreshToken';
 async function sendMessage() {
   const token = await getValidAccessToken();
 
-  let email = "dhenwood@cisco.com"
+  let email = "email@address.com" //your webex email address
   let msg = "Successfully sent message using OAuth token: " + token
   let finalMsg = JSON.stringify({
     "toPersonEmail": email,
